@@ -1,0 +1,4 @@
+{"backend_state":"init","connection_file":"/projects/f8b69746-629d-4592-8f76-5d11b6fd6282/.local/share/jupyter/runtime/kernel-a0e37e1f-c007-4239-9018-77ebf54bf7fd.json","kernel":"ds_env","kernel_error":"","kernel_state":"idle","kernel_usage":{"cpu":0,"memory":0},"trust":true,"type":"settings"}
+{"end":1656596498212,"exec_count":1,"id":"b14789","input":"import plotly.express as px\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt ","kernel":"ds_env","pos":0,"start":1656596495974,"state":"done","type":"cell"}
+{"id":"a48a64","input":"","pos":1,"state":"done","type":"cell"}
+{"last_load":1656596168745,"type":"file"}
