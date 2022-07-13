@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Heart Disease Predictor</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Heart Disease</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('about')}}">Data Visualizations</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('post')}}">Data Modeling</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('contact')}}">Conclusion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url({{url_for('static', filename='about_bg.jpeg')}})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Data Visualization</h1>
+                            <span class="subheading">Made by Robot Squad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+         <h3 style ="color:Indigo;">Heat Map-Correlation Between Different Parameters and Heart Disease</h3>
+             <iframe width="600" height="600" title="heat_map1.html" src="{{url_for('static', filename='heat_map3.html')}}"></iframe>
+                      <p>A heat map shows the correlation between different variables. This heat map shows the correlations between different variables such as age, resting blood pressure, cholesterol, fasting blood sugar, maximum heart rate, and oldpeak. For each combination of two variables, a block of color is shown. If the color is dark blue, the relationship between the two variables is strong. If the color is light blue, the relationship is weak. The diagonal line of dark blue squares is predictable because the data for the same variables (ex. age and age) is identical. Therefore, the correlation is extremely strong. However, we can see that there is no correlation between age and maximum heart rate because the color is almost 0. </p>
+         <h3 style ="color:MediumTurquoise;">Stacked Bar Chart-Cholesterol and MaxHR's Effect on Heart Disease</h3>
+  
+  <iframe width="750" height="500" title="Correlation Table of Features" src="{{url_for('static', filename='bar_chart2.html')}}"></iframe>     
+  <p>A stacked bar chart shows bars that are used to compare categorical data. The bar graph shows how people with a lower max heart rate have a slightly higher chance of getting heart disease. For example, a person who has a max heart rate of 180 is far more likely to not have heart disease, and a person with a max heart rate of 105 is more likely to have heart rate than to not have it. The graph also shows that people with higher cholesterol are more likely to be diagnosed with heart disease.</p>
+<h3 style ="color:DarkViolet;">Bubble Chart-Age and Cholesterol's Correlation to Heart Disease</h3> 
+   <iframe width="800" height="600" title="Correlation Table of Features" src="{{url_for('static', filename='Bubble Chart1.html')}}"></iframe>
+                      <p>A bubble chart is a scatter plot with an added third dimension shown through the size of the markers. This bubble chart shows the correlation between a person's age and their cholesterol levels. If the color is teal, the user does not have heart disease. If the bubble color is yellow, the user does have heart disease. There does not seem to be a correlation between age and cholesterol because each age group has multiple users with varying cholesterol levels and a clear line of best fit cannot be drawn.</p>
+ <h3 style ="color:Orchid	;">Box Plot-Resting BP vs Heart Disease</h3> 
+         <iframe width="800" height="700" title="Correlation Table of Features" src="{{url_for('static', filename='box_plot1.html')}}"></iframe>             
+         <p>A box plot shows the distribution of a variable with its quartiles. The upper and lower quartiles are represented in box. The median is represented by the line inside the box. This box plot shows that resting blood pressure is not a crucial factor concerning heart disease. Each plot has a similar median, so it is hard to differentiate whether or not the blood pressure will affect if a person will get heart disease.</p>
+<h3 style = "color:SaddleBrown;">Density Contour-MaxHR vs Age Separated by Sex</h3>
+<iframe width="750" height="600" title="Correlation Table of Features" src="density_contour1.html"></iframe>
+                      <p>A density contour plot resembles a contour but it groups a set of points that are specified by their x and y coordinates into bins. The density contour shows the correlation between maximum heart rate and age for females and males. It is evident that in both graphs people who were diagnosed with heart disease have a lower maximum heart rate than people who were not diagnosed with heart disease. However, the maximum heart rates become similar as the age increases.</p>
+<h3 style = "color:SaddleBrown;">Density Contour-MaxHR vs Age</h3>
+<iframe width="1000" height="600" title="Correlation Table of Features" src="{{url_for('static', filename='color_density_contour1.html')}}"></iframe> 
+                    <p>This density contour shows different ages compared to the maximum heart rate. At the age of 52-57, the max heart rate is at 124.5 which shows that 34 people at this age have a similar max heart rate.</p>
+                    </div>
+                      <div>                      
+                      </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                            </li>
+                            <li class="list-inline-item">
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; AI Camp 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+    </body>
+  
+</html>

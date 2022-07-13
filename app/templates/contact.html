@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" /><strong></strong>
+        <meta name="author" content="" />
+        <title>Heart Disease Predictor</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+   <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Heart Disease</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('about')}}">Data Visualizations</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('post')}}">Data Modeling</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('contact')}}">Conclusion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: {{url_for('static', filename='assets/img/contact_bg.webp')}}">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Conclusion</h1>
+                            <span class="subheading">Have questions? I have answers.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                      <h3>How did we do it?</h3>
+                      <body>We started off with a data set from Kaggle and started evaluating it. Then we created different models using the parameters such as, age, sex, maximum heart rate, etc., and chose the best ones to put on our website. Using these models, we were able to predict if a person will or will not have heart disease by recording the accuracy of our models.  Afterwards, we created this website to present our models with information to create a heart disease predictor.  </body>
+                      <br><br>
+                      <h3>
+                        Future Improvements
+                      </h3>
+ <body> With this heart disease predictor, people will be able to predict whether or not they will have heart disease by inputting parameters such as their age, sex, or resting blood pressure. To further improve the heart disease predictor, we can collect more data to bring light to different results. We can also try different algorithms to improve the predictor as a whole. Deeper research can also be conducted to have a better understanding of the predictor, and possibly find any errors, or important signs signifying if a person is likely to get heart disease.</body>
+                  </div>
+              </div>
+          </div>
+        </main>
+
+
+ 
+<div class="container px-4 px-lg-5">
+   <div class="row gx-4 gx-lg-5 justify-content-center">
+   <div class="col-md-10 col-lg-8 col-xl-7">
+  <h3>Heart Disease Predictor</h3>
+  <form action="" method="POST">
+    <label for="Age">Age: <br> [28-77] </label>
+    <input type="text" id="Age" name="Age">
+    <br> <br>
+    <label for="Sex">Sex:</label>
+    <select id="Sex" name="Sex">
+      <option value="0">F</option>
+      <option value="1">M</option>
+    </select>
+    <br> <br>
+    <label for="ChestPainType">Chest Pain Type: </label>
+    <select id="ChestPainType" name="ChestPainType">
+      <option value="0">ASY</option>
+      <option value="1">ATA</option>
+      <option value="2">NAP</option>
+    </select>
+    <br> <br>
+    <label for="RestingBP">Resting Blood Pressure: <br> [0-200] </label>
+    <input type="text" id="RestingBP" name="RestingBP">
+    <br> <br>
+    <label for="floors">Cholesterol: <br> [0-700] </label>
+    <input type="text" id="Cholesterol" name="Cholesterol">
+    <br> <br>
+    <label for="FastingBS">Fasting Blood Sugar:<br> [0-1] </label>
+    <input type="text" id="FastingBS" name="FastingBS">
+    <br> <br>
+    <label for="view">Resting ECG:</label>
+    <select id="view" name="view">
+      <option value="0">Normal</option>
+      <option value="1">ST</option>
+
+    </select>
+    <br> <br>
+    <label for="Max HR">Max HR:<br> [0-200]</label>
+    <input type="text" id="Max HR" name="Max HR">
+   
+    <br> <br>
+    <label for="ExerciseAngina">Exercise Angina:</label>
+    <select id="ExerciseAngina" name="ExerciseAngina">
+      <option value="0">N</option>
+      <option value="1">Y</option>
+    </select>
+    <br> <br>
+    <label for="Oldpeak">Old Peak: <br> [-2.6 - 6.2] </label>
+    <input type="text" id="Oldpeak" name="Oldpeak">
+    <br> <br>
+    <label for="ST_Slope">ST_Slope:</label>
+    <select id="ST_Slope" id="ST_Slope" name="ST_Slope">
+      <option value="1">Flat</option>
+      <option value="2">Up</option>
+    </select>
+    <br> <br>
+    <input type="submit" value="Submit"> <br>
+    </form>
+  {% if prediction_text %}
+           <p class= "lead" style="margin-left:150px; margin-top: 2rem;"><b>
+             The Predicted Price of your House is  {{ prediction_text }}!
+                 </b> </p>
+                  
+          {% endif %}
+  </div>
+  </div>
+</div>
+                  
+                  
+<!--- Team info -->
+<section id="team" class="bg-light">
+                <div class="container px-5", style="margin-bottom: 3rem !important;">
+                  </div>
+                  <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-9 col-xl-6">
+                            <div class="text-center">
+                              <br>
+                              <br>
+                                <h2 class="fw-bolder">Meet our Team:  Robot Squad</h2>
+                                <p class="lead fw-normal text-muted mb-5"> Instructor: Katie Jiang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">etart1234@gmail.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Erika Tsai</h5></a>
+                                  <a class="text-decoration-none link-dark stretched-link" >I am a 15 year old that attends Cherry Hill East High School. I like music, pancakes, and sleep. </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">yuanzeng07@gmail.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3"> Yuanyuan Zeng</h5></a>
+                                  <a class="text-decoration-none link-dark stretched-link" ><p
+                    style="font-size:100%;"> I'm just an ordinary student. Hope the people see this site have a great day! I want to sleep all day (^_^)!
+                  </p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">chancellorkatherine123@gmail.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Katherine Chancellor</h5> I'm just a 14 year old who's ready to explore and help the world. I love my dogs, my friends, and family. And i love to game!</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">stephanie07670@icloud.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Stephanie Ng</h5>I am a 16 year old who attends Tenafly High School. I love helping people and discovering new things.</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">sophiatruong12@gmail.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Sophia Truong</h5></a>
+                                  <a class="text-decoration-none link-dark stretched-link" >I attend Dawson high school and enjoy playing video games. </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                  <div class="badge bg-primary bg-gradient rounded-pill mb-2">bunniesviolin@gmail.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Sarah Son</h5></a>
+                                  <a class="text-decoration-none link-dark stretched-link" >I am a 15-year-old who attends Davis Senior High School. I like playing the violin. </a>
+                                </div>
+                            </div>
+                        </div>
+  <div class="col-lg-8 mb-3">
+                            <div class="card h-100 shadow border-0">
+                    <div class="card-body p-4">
+                      <div class="badge bg-primary bg-gradient rounded-pill mb-2">ben_nguyen17@icloud.com</div>
+                                    <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Ben Nguyen</h5></a>
+                      <a class="text-decoration-none link-dark stretched-link" >I am a 15 year old who attends Norwell High School in Massachusetts. I like math, games, and music. </a>
+
+                        </div>
+                    </div>
+                </div>
+              </div>
+                  </section>
+
+<!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                            </li>
+                            <li class="list-inline-item">
+                            </li>
+                            <li class="list-inline-item">
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; AI Camp 2022</div>
+                    </div>
+              </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+    </body>
+</html>
