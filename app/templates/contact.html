@@ -35,13 +35,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: {{url_for('static', filename='assets/img/contact_bg.webp')}}">
+        <header class="masthead" style="background-image: url({{url_for('static', filename='assets/img/contact_bg.webp')}})">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
                             <h1>Conclusion</h1>
-                            <span class="subheading">Have questions? I have answers.</span>
+                            <span class="subheading">Made by Robot Squad</span>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
    <div class="col-md-10 col-lg-8 col-xl-7">
   <h3>Heart Disease Predictor</h3>
   <form action="" method="POST">
-    <label for="Age">Age: <br> [28-77] </label>
+    <label for="Age">Age: [28-77] </label>
     <input type="text" id="Age" name="Age">
     <br> <br>
     <label for="Sex">Sex:</label>
@@ -87,13 +87,13 @@
       <option value="2">NAP</option>
     </select>
     <br> <br>
-    <label for="RestingBP">Resting Blood Pressure: <br> [0-200] </label>
+    <label for="RestingBP">Resting Blood Pressure:[0-200] </label>
     <input type="text" id="RestingBP" name="RestingBP">
     <br> <br>
-    <label for="floors">Cholesterol: <br> [0-700] </label>
+    <label for="floors">Cholesterol:[0-700] </label>
     <input type="text" id="Cholesterol" name="Cholesterol">
     <br> <br>
-    <label for="FastingBS">Fasting Blood Sugar:<br> [0-1] </label>
+    <label for="FastingBS">Fasting Blood Sugar: [0-1] </label>
     <input type="text" id="FastingBS" name="FastingBS">
     <br> <br>
     <label for="view">Resting ECG:</label>
@@ -103,7 +103,7 @@
 
     </select>
     <br> <br>
-    <label for="Max HR">Max HR:<br> [0-200]</label>
+    <label for="Max HR">Max HR:[0-200]</label>
     <input type="text" id="Max HR" name="Max HR">
    
     <br> <br>
@@ -113,10 +113,10 @@
       <option value="1">Y</option>
     </select>
     <br> <br>
-    <label for="Oldpeak">Old Peak: <br> [-2.6 - 6.2] </label>
+    <label for="Oldpeak">Old Peak:[-2.6 - 6.2] </label>
     <input type="text" id="Oldpeak" name="Oldpeak">
     <br> <br>
-    <label for="ST_Slope">ST_Slope:</label>
+    <label for="ST_Slope">ST Slope(the slope of the peak exercise ST segment):</label>
     <select id="ST_Slope" id="ST_Slope" name="ST_Slope">
       <option value="1">Flat</option>
       <option value="2">Up</option>
@@ -126,7 +126,7 @@
     </form>
   {% if prediction_text %}
            <p class= "lead" style="margin-left:150px; margin-top: 2rem;"><b>
-             The Predicted Price of your House is  {{ prediction_text }}!
+             Your predicted diagnosis is {{ prediction_text }}!
                  </b> </p>
                   
           {% endif %}

@@ -35,7 +35,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: {{url_for('static'= filename='assets/img/6CausesofHeartDisease.png')}}">
+        <header class="masthead" style="background-image: url({{url_for('static', filename='assets/img/6CausesofHeartDisease.png')}})">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -58,7 +58,7 @@
   <style> img {border: 5px solid #167;}</style>
   </head>
   <h4 style="color: orange;" "font-size:300%;">Naive Bayes Classifier</h4>
-  <img src="{{url_for('static', filename=assets/img/Naive-bayes.png)}}" alt="Naive Bayes" width="600">
+  <img src="{{url_for('static', filename='assets/img/Naive-bayes.png')}}" alt="Naive Bayes" width="600">
   <br>
                       <br>
   <body style="font-size:130%;">The <b><mark>Naive Bayes</mark></b> classifier is a data modeling method based on applying Thomas Bayes' theorem to classify data. Although simple, Naive Bayes classifiers are usually able to produce high accuracy levels.</body>
@@ -68,12 +68,12 @@
                       <body> Our initial result had an accuracy score of 84% and a recall score of 83%. In order to improve the results, we utilized a heat map. After that, our final accuracy score was 85% with a recall score of 85%.</body>
                       <br>
                       <br>
-                      <img src="{{url_for('static', filename=assets/img/naive_bayes.png)}}" width="600">
+                      <img src="{{url_for('static', filename='assets/img/naive_bayes.png')}}" width="600">
                       <br>
                       <br>
                       <br>
   <h4 style="color: olive;" "font-size:300%;">Random Forest</h4>
-<img src="{{url_for('static', filename=assets/img/random-forest-diagram.svg)}}" alt="random forest" width= "600">
+<img src="{{url_for('static', filename='assets/img/random-forest-diagram.svg')}}" alt="random forest" width= "600">
   <br>
                       <br>
   <body style="font-size:130%;">
@@ -86,12 +86,12 @@
                       <br>
                       <br>
                       <figure>
-  <img src="{{url_for('static', filename=assets/img/RF-matrix.png)}}" width="600" alt="Improved Matrix">
+  <img src="{{url_for('static', filename='assets/img/RF-matrix.png')}}" width="600" alt="Improved Matrix">
 </figure>
                       <br>
                       <br>
                           <h4 style="color: maroon;" "font-size:300%;">SVM (Support-Vector Machine)</h4>
-  <img src="{{url_for('static', filename=assets/img/SVM_2.png)}}" alt="SVM" width="600">
+  <img src="{{url_for('static', filename='assets/img/SVM_2.png')}}" alt="SVM" width="600">
   <br>
                       <br>
   <body style="font-size:130%;"><b><mark>Support-vector machines</mark></b> are supervised machine learning models that use classification algorithms for two-group classification problems.</body>
@@ -103,7 +103,7 @@
 </body>
                       <br>
                       <br>
-                      <img src="{{url_for('static', filename=asset/img/SVM.png)}}" width="600">
+                      <img src="{{url_for('static', filename='assets/img/SVM.png')}}" width="600">
                            <br>
 
                     </div>

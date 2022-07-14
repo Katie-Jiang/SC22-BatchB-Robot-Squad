@@ -1,6 +1,8 @@
 # import requirements needed
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from utils import get_base_url
+import joblib
+import numpy as np
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -12,6 +14,9 @@ if base_url == '/':
     app = Flask(__name__)
 else:
     app = Flask(__name__, static_url_path=base_url+'static')
+    
+
+model = joblib.load("random_forest.joblib")
 
 # set up the routes and logic for the webserver
 @app.route(f'{base_url}' )
@@ -27,12 +32,35 @@ def about():
     return render_template('about.html')
 
 @app.route(f'{base_url}/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route(f'{base_url}/post')
 def post():
     return render_template('post.html')
 
-@app.route(f'{base_url}/post')
-def contact():
-    return render_template('contact.html')
+@app.route(f'{base_url}/contact', methods=['GET', 'POST'])
+def main():
+    if request.method == 'GET':
+        return(render_template('contact.html', prediction_text = ""))
+    
+    if request.method == 'POST':
+        
+        inp_features = [float(x) for x in request.form.values()]
+        
+        input_features = np.array(inp_features)
+        
+        input_features = input_features.reshape(1,-1)
+        
+        predictions = model.predict(input_features)[0]
+        
+        if predictions == 0:
+            output = "No disease"
+        else:
+            output = "Have disease"
+        
+        return render_template('contact.html', prediction_text=output)
+
 
 # define additional routes here
 # for example:
